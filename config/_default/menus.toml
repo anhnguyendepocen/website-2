@@ -29,3 +29,8 @@
     name = "CV"
     url = "files/Doser_CV.pdf"
     weight = 70
+    
+[[main]]
+  name = "FOR/STT 875 Text"
+  url = "files/_book/index.html"
+  weight = 70
