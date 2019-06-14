@@ -2269,11 +2269,11 @@ females in the data. Later we will learn how to subset using logical
 indices, which is a very powerful way to access desired elements of a
 vector.
 
-\section{Practice Problem}\label{practice-problem-1}
+\subsection{Practice Problem}\label{practice-problem-1}
 
 A bad programming technique that often plagues beginners is a technique
 called \emph{hardcoding}. Consider the following simple vector
-containing data on the number of tree species found at diffrent sites.
+containing data on the number of tree species found at different sites.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -5271,7 +5271,7 @@ has the same result.
 \subsection{Practice Problems}\label{practice-problems}
 
 \begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
+\def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
   Notice the output value of \texttt{NA} for the column
@@ -5284,6 +5284,13 @@ has the same result.
   to compute the median values for all numeric columns in the
   \texttt{iris} data set.
 \end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\OperatorTok{>}\StringTok{ }\KeywordTok{apply}\NormalTok{(WeatherKLAN2014Full[,}\KeywordTok{c}\NormalTok{(}\DecValTok{2}\OperatorTok{:}\DecValTok{19}\NormalTok{, }\DecValTok{21}\NormalTok{, }\DecValTok{23}\NormalTok{)], }\DecValTok{2}\NormalTok{, sd, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
+\OperatorTok{>}\StringTok{ }\KeywordTok{apply}\NormalTok{(iris[, }\OperatorTok{-}\DecValTok{5}\NormalTok{], }\DecValTok{2}\NormalTok{, median)}
+\end{Highlighting}
+\end{Shaded}
 
 \subsection{\texorpdfstring{Saving Typing Using
 \texttt{with()}}{Saving Typing Using with()}}\label{saving-typing-using-with}
@@ -5548,16 +5555,16 @@ example, \texttt{a{[}-(2:3){]}} would drop the first two columns of
 \texttt{a}. Some care is needed when removing variables using the
 negative sign.
 
-\subsection{Practice Problem}\label{practice-problem-6}
-
-What happens if you write \texttt{a{[}-2:3{]}} instead of
-\texttt{a{[}-(2:3){]}}? Why are the parentheses important here?
-
 An alternative approach is to set the variables you'd like to remove to
 \texttt{NULL}. For example,
 \texttt{a{[}c("y","z"){]}\ \textless{}-\ NULL} and
 \texttt{a{[},2:3{]}\ \textless{}-\ NULL} produce the same result as
 above.
+
+\subsection{Practice Problem}\label{practice-problem-6}
+
+What happens if you write \texttt{a{[}-2:3{]}} instead of
+\texttt{a{[}-(2:3){]}}? Why are the parentheses important here?
 
 \subsection{Transforming Variables}\label{transforming-variables}
 
@@ -8308,7 +8315,7 @@ use \texttt{1:n}. Let's see how fast this is.
 
 \begin{verbatim}
    user  system elapsed 
-  0.001   0.000   0.001 
+  0.001   0.000   0.000 
 \end{verbatim}
 
 \begin{Shaded}
@@ -8616,7 +8623,7 @@ function (file, header = TRUE, sep = ",", quote = "\"", dec = ".",
     fill = TRUE, comment.char = "", ...) 
 read.table(file = file, header = header, sep = sep, quote = quote, 
     dec = dec, fill = fill, comment.char = comment.char, ...)
-<bytecode: 0x55e5b396d460>
+<bytecode: 0x558a3eea14b0>
 <environment: namespace:utils>
 \end{verbatim}
 
@@ -9319,7 +9326,7 @@ for learning about how to use Google maps web services.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-198-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-200-1.pdf}
 While the call to \texttt{get\_map} can use a bounding box
 (\texttt{mu.bbox} in code above) to define the \texttt{basemap} extent,
 I've found that it's easier to pass it a center point location
@@ -9461,7 +9468,7 @@ take \texttt{geom\_point}'s \texttt{data} argument as a data frame
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-203-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-205-1.pdf}
 
 There is something subtle and easy to miss in the code above. Notice the
 \texttt{aes} function arguments in \texttt{geom\_points} take geographic
@@ -9564,7 +9571,7 @@ accordingly.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-206-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-208-1.pdf}
 
 Let's add the roads and some more descriptive labels as a finishing
 touch. The roads data include a variable called \texttt{type} that
@@ -9633,7 +9640,7 @@ Warning: Removed 616 rows containing missing values
 (geom_path).
 \end{verbatim}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-207-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-209-1.pdf}
 
 The second, and more cryptic, of the two warnings from this code occurs
 because some of the roads extend beyond the range of the map axes and
@@ -9781,7 +9788,7 @@ attr(,"package")
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-211-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-213-1.pdf}
 
 A few things to notice in the code above. First the \texttt{getData}
 function needs the longitude \texttt{lon} and latitude \texttt{lat} to
@@ -9815,7 +9822,7 @@ argument and save the resulting SRTM subset over the larger tile (the
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-212-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-214-1.pdf}
 
 The \texttt{crop} is in effect doing a spatial subsetting of the raster
 data. We'll return to the \texttt{srtm} data and explore different kinds
@@ -9907,7 +9914,7 @@ say we want to select and map all management units in \texttt{mu}, i.e.,
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-215-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-217-1.pdf}
 
 More generally, however, the \texttt{over} function offers consistent
 overlay operations for \texttt{sp} objects and can return either indexes
@@ -10003,7 +10010,7 @@ Warning: Removed 483 rows containing missing values
 (geom_point).
 \end{verbatim}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-218-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-220-1.pdf}
 
 In the call to \texttt{geom\_point} above, \texttt{coords.x1}
 \texttt{coords.x2} are the default names given to longitude and
@@ -10101,7 +10108,7 @@ Joining, by = "id"
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-220-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-222-1.pdf}
 
 The \texttt{aggregate()} function will work with all \texttt{sp}
 objects. For example let's map the variance of pixel values in
@@ -10145,7 +10152,7 @@ Joining, by = "id"
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-221-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-223-1.pdf}
 
 \section{Where to go from here}\label{where-to-go-from-here}
 
@@ -10802,7 +10809,7 @@ the characteristic shape.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-232-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-234-1.pdf}
 
 To make this more concrete, we will consider a data set on a population
 of women who were over 21 years of age, lived near Phoenix, Arizona, and
@@ -10984,7 +10991,7 @@ We can plot the fitted probabilities along with the data ``by hand''.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-237-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-239-1.pdf}
 
 The \texttt{ggplot2} package also provides a way to do this more
 directly, using \texttt{stat\_smooth}.
@@ -10998,7 +11005,7 @@ directly, using \texttt{stat\_smooth}.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-238-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-240-1.pdf}
 
 From these graphics we can see that although glucose level and diabetes
 are related, there are many women with high glucose levels who are not
@@ -11247,7 +11254,7 @@ below.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-243-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-245-1.pdf}
 
 \subsection{More than Two Classes}\label{more-than-two-classes}
 
@@ -11301,7 +11308,7 @@ Fisher's iris data.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-244-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-246-1.pdf}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -11310,7 +11317,7 @@ Fisher's iris data.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-244-2.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-246-2.pdf}
 
 Here the potential predictors are sepal width, sepal length, petal
 width, and petal length. The goal is to find a classifier that will
@@ -11583,7 +11590,7 @@ deviations, so we will not standardize these data before applying kNN.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-250-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-252-1.pdf}
 
 Next a large set of test data is created using the \texttt{expand.grid}
 function, which creates a data frame with all possible combinations of
@@ -11718,7 +11725,7 @@ and the decision boundary.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-253-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-255-1.pdf}
 
 Next we graph the decision boundary of kNN with \(k=1\).
 
@@ -11759,7 +11766,7 @@ Next we graph the decision boundary of kNN with \(k=1\).
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-254-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-256-1.pdf}
 
 \subsection{kNN and the Diabetes Data}\label{knn-and-the-diabetes-data}
 
@@ -11788,7 +11795,7 @@ knn_Pima  No Yes
 At least in terms of the confusion matrix, kNN with \(k=15\) performed
 about as well as logistic regression for these data.
 
-\section{Practice Problem}\label{practice-problem-13}
+\subsection{Practice Problem}\label{practice-problem-13}
 
 Produce a figure that displays how the number of false positives
 produced from the kNN classifier for the diabetes data set changes for
@@ -12855,11 +12862,6 @@ should be a vector (not a list).
 \end{Highlighting}
 \end{Shaded}
 
-\begin{verbatim}
- [1] "Once"  "upon"  "a"     "time"  "there" "was"  
- [7] "a"     "man"   "named" "Bob"  
-\end{verbatim}
-
 \subsection{\texorpdfstring{\texttt{nchar}
 Again}{nchar Again}}\label{nchar-again}
 
@@ -12901,7 +12903,7 @@ the number of letters in each word in the novel.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-283-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-285-1.pdf}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -12943,7 +12945,7 @@ md.data.frame$Freq, max.words = 500, : the could not be
 fit on page. It will not be plotted.
 \end{verbatim}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-285-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-287-1.pdf}
 
 \subsection{\texorpdfstring{\texttt{substr} and
 \texttt{strtrim}}{substr and strtrim}}\label{substr-and-strtrim}
@@ -13587,14 +13589,10 @@ to install the microbenchmark package.
 
 \begin{verbatim}
 Unit: nanoseconds
-    expr   min      lq  mean median    uq     max
-  sum(x)   964   999.5  1299   1028  1078   17425
- sumC(x)  2218  2315.5 11736   2388  2486  896396
- sumR(x) 35297 35495.5 65993  35602 36182 2858399
- neval
-   100
-   100
-   100
+    expr   min    lq  mean median    uq     max neval
+  sum(x)   962   986  1088   1003  1030    7286   100
+ sumC(x)  2217  2288 12855   2346  2420 1035082   100
+ sumR(x) 35245 35376 59857  35450 35615 2415541   100
 \end{verbatim}
 
 The \texttt{microbenchmark()} function runs each function it's passed
@@ -14223,7 +14221,7 @@ are in the database. We can produce a barplot to show this.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-314-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-316-1.pdf}
 
 We first load the \texttt{dbplot} package. Next we produce the bar plot.
 Notice that we can continue to use the convenient
@@ -14260,7 +14258,7 @@ The following object is masked from 'package:dplyr':
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-315-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-317-1.pdf}
 
 \subsection{Using Google BigQuery}\label{using-google-bigquery}
 
@@ -14463,7 +14461,7 @@ the data.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-320-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-322-1.pdf}
 
 Upon first glance at this plot, a naive student might think ``Wow! Wind
 speeds have decreased dramatically since the 1930s'', and just accept
@@ -14756,7 +14754,7 @@ influence the signal. We will graph these as digital signals.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-322-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-324-1.pdf}
 
 Now that we understand the fundamentals of sinusoids, let's see how we
 can work with noise and filters on sinusoids using R.
@@ -14786,7 +14784,7 @@ For a first example, consider the sinusoid generated below.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-323-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-325-1.pdf}
 
 This is a simple sinusoid that has an amplitude of 1 and a frequency of
 1. It is not likely that when obtaining a real-world signal you would
@@ -14801,7 +14799,7 @@ some noise to it.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-324-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-326-1.pdf}
 
 We add noise to the function by adding a random value
 (\texttt{0.25*rnorm(length(t)}) to each value in the signal. This is
@@ -14843,7 +14841,7 @@ This warning is displayed once per session.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-325-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-327-1.pdf}
 
 You can see that the recovered signal is not perfect, as there is still
 some noise in the signal, and the timing of the peaks in the signal is
@@ -14871,7 +14869,7 @@ sample signal. Let's start with a noisy signal
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-326-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-328-1.pdf}
 
 Again, you can easily recognize the pattern is sinusoidal, but there is
 noise in the signal that you want to extract. Perhaps you are interested
@@ -14898,7 +14896,7 @@ this we can again use the Butterworth filter.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-327-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-329-1.pdf}
 
 \section{Fourier Transforms and
 Spectrograms}\label{fourier-transforms-and-spectrograms}
@@ -14977,7 +14975,7 @@ the R environment.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics[width=1\linewidth]{bookdown_files/figure-latex/unnamed-chunk-328-1}
+\includegraphics[width=1\linewidth]{bookdown_files/figure-latex/unnamed-chunk-330-1}
 
 Let's explore more of the parameters for this function to get a better
 understanding of how it is working. Type in \texttt{?spectro} in the R
@@ -14998,7 +14996,7 @@ produced.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics[width=1\linewidth]{bookdown_files/figure-latex/unnamed-chunk-329-1}
+\includegraphics[width=1\linewidth]{bookdown_files/figure-latex/unnamed-chunk-331-1}
 
 You can immediately see that there are some slight differences between
 the spectrograms. The first spectrogram appears to be more precise than
@@ -15442,7 +15440,7 @@ latent variables that explain large amounts of variation in a data set.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-342-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-344-1.pdf}
 
 From the graph, we see that two birds from the US form a group with a
 bird from Mexico, and a bird from the US forms a group with two birds
@@ -15499,7 +15497,7 @@ might work, we can draw some scatter plots of length versus width. In
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-345-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-347-1.pdf}
 
 We see the \texttt{plot()} function by default creates a basic
 scatterplot when we supply the function with values for the \texttt{x}
@@ -15517,7 +15515,7 @@ help.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-346-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-348-1.pdf}
 
 The \texttt{pch\ =} argument is used to control the type of symbol used
 to represent the data points. \texttt{pch\ =\ 19} specifies a filled in
@@ -15539,7 +15537,7 @@ legend using the \texttt{legend()} function.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-347-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-349-1.pdf}
 
 Let's walk through the additional complexities one at a time:
 
@@ -15581,7 +15579,7 @@ argument in the legend as well.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-348-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-350-1.pdf}
 
 \subsection{Adding lines to a scatter
 plot}\label{adding-lines-to-a-scatter-plot-1}
@@ -15600,7 +15598,7 @@ compute the least squares line
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-349-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-351-1.pdf}
 
 For the iris data, it probably makes more sense to fit separate lines by
 species. Below we compute the linear model separately for each species,
@@ -15622,7 +15620,7 @@ each species.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-350-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-352-1.pdf}
 
 Note that we could also do this using a \texttt{for} loop, which you
 will learn about soon in Chapter \ref{functions}.
@@ -15642,7 +15640,7 @@ will learn about soon in Chapter \ref{functions}.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-351-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-353-1.pdf}
 
 Another common use of line segments in a graphic is to connect the
 points in order. Although it is not clear why this helps in
@@ -15663,7 +15661,7 @@ specifying the argument
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-352-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-354-1.pdf}
 
 Now we attempt to only connect the points within a given species. Doing
 this requires the use of the \texttt{lines()} function to draw three
@@ -15687,7 +15685,7 @@ section :)
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-353-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-355-1.pdf}
 
 \section{Labels, Axes, Text, etc.}\label{labels-axes-text-etc.-1}
 
@@ -15735,7 +15733,7 @@ scatter plot of motor vehicle theft versus burglary.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-354-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-356-1.pdf}
 
 \subsection{Labels}\label{labels-1}
 
@@ -15755,7 +15753,7 @@ the \texttt{plot()} function.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-355-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-357-1.pdf}
 
 Perhaps it may be easier to read the values on the y-axis if they were
 oritented horizontally instead of vertically. We can do this using the
@@ -15771,7 +15769,7 @@ oritented horizontally instead of vertically. We can do this using the
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-356-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-358-1.pdf}
 
 \section{Customizing Axes}\label{customizing-axes-1}
 
@@ -15793,7 +15791,7 @@ go to the maxium x and y values.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-357-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-359-1.pdf}
 
 Now we eliminate the axes and box automatically drawn by the
 \texttt{plot()} function, and subsequently add our own axes using the
@@ -15816,7 +15814,7 @@ the axes in whatever way you desire.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-358-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-360-1.pdf}
 
 \subsection{Text, Point Size, and
 Color}\label{text-point-size-and-color-1}
@@ -15845,7 +15843,7 @@ add labels to each point.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-359-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-361-1.pdf}
 
 This graph is mind-numbingly busy, and is missing some notable things
 (i.e.~legend). For now, we leave it up to you to add in a legend, make
@@ -15880,7 +15878,7 @@ reproduce the following plot.
 \bottomrule
 \end{tabular}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-361-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-363-1.pdf}
 
 \section{Other Types of Graphics}\label{other-types-of-graphics-1}
 
@@ -15932,7 +15930,7 @@ package, we can use the simple \texttt{hist()} function.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-363-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-365-1.pdf}
 
 The function automatically specifies the binwidths for the data, however
 we can easily change this ourselves to something more suitable using the
@@ -15945,7 +15943,7 @@ orientation, title, and color of the bins.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-364-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-366-1.pdf}
 
 \subsection{Boxplots}\label{boxplots-1}
 
@@ -15977,7 +15975,7 @@ The following object is masked _by_ '.GlobalEnv':
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-365-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-367-1.pdf}
 
 Here's the same set of boxplots, but with different colors and the boxes
 plotted horizontally rather than vertically
@@ -15988,7 +15986,7 @@ plotted horizontally rather than vertically
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-366-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-368-1.pdf}
 
 However, notice in the last two graphs the y-axis labels were running
 off the page. Using the \texttt{graphics} package, we have the ability
@@ -16003,7 +16001,7 @@ extend the amount of space in the plot on the left side of the graph.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-367-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-369-1.pdf}
 
 \subsection{Bar Graphs}\label{bar-graphs-1}
 
@@ -16060,7 +16058,7 @@ gender.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-369-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-371-1.pdf}
 
 Notice that to create a basic bar graph using the graphics package, we
 first take our variable of interest \texttt{StudentGoals\$Goals} and put
@@ -16077,7 +16075,7 @@ gender.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-370-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-372-1.pdf}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -16087,7 +16085,7 @@ gender.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-371-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-373-1.pdf}
 
 In this example R counted the number of students who had each goal and
 used these counts as the height of the bars. Sometimes the data contain
@@ -16105,7 +16103,7 @@ data\footnote{R offers a large color palette, run \texttt{colors()} on
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-372-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-374-1.pdf}
 
 \subsection{Graphs of Functions}\label{graphs-of-functions-1}
 
@@ -16121,7 +16119,7 @@ another column, and then draw a line plot.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-373-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-375-1.pdf}
 
 \section{Saving Graphics}\label{saving-graphics-1}
 
