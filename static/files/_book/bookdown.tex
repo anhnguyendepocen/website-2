@@ -167,7 +167,7 @@
 
 \title{R Programming for Data Sciences}
 \author{Andrew O. Finley, Jeffrey W. Doser, Vince Melfi}
-\date{2019-06-14}
+\date{2019-06-25}
 
 \begin{document}
 \maketitle
@@ -652,7 +652,7 @@ installation process). A (rather small) view of RStudio is displayed in
 Figure \ref{fig:rstudioPic}.
 
 \begin{figure}
-\includegraphics[width=4in,height=4in]{../figures/RStudio} \caption{The RStudio IDE}\label{fig:rstudioPic}
+\includegraphics[width=1\linewidth]{../figures/RStudio} \caption{The RStudio IDE}\label{fig:rstudioPic}
 \end{figure}
 
 Initially the RStudio window contains three smaller windows. For now our
@@ -1077,7 +1077,7 @@ practice to have a dedicated directory for each R project or exercise.
 \section{Quality of R code}\label{quality-of-r-code}
 
 \begin{figure}
-\includegraphics[width=4in,height=4in]{../figures/code_quality} \caption{xkcd: Code Quality}\label{fig:comic}
+\includegraphics[width=1\linewidth]{../figures/code_quality} \caption{xkcd: Code Quality}\label{fig:comic}
 \end{figure}
 
 Writing well-organized and well-labeled code allows your code to be more
@@ -4028,19 +4028,6 @@ prompt \texttt{+} can cause confusion.
 \begin{Shaded}
 \begin{Highlighting}[]
 \KeywordTok{library}\NormalTok{(ggplot2)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-Registered S3 methods overwritten by 'ggplot2':
-  method         from 
-  [.quosures     rlang
-  c.quosures     rlang
-  print.quosures rlang
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{data =}\NormalTok{ iris, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ Sepal.Length, }\DataTypeTok{y =}\NormalTok{ Sepal.Width)) }\OperatorTok{+}\StringTok{ }
 \StringTok{    }\KeywordTok{geom_point}\NormalTok{()}
 \end{Highlighting}
@@ -8315,7 +8302,7 @@ use \texttt{1:n}. Let's see how fast this is.
 
 \begin{verbatim}
    user  system elapsed 
-  0.001   0.000   0.000 
+      0       0       0 
 \end{verbatim}
 
 \begin{Shaded}
@@ -8623,7 +8610,7 @@ function (file, header = TRUE, sep = ",", quote = "\"", dec = ".",
     fill = TRUE, comment.char = "", ...) 
 read.table(file = file, header = header, sep = sep, quote = quote, 
     dec = dec, fill = fill, comment.char = comment.char, ...)
-<bytecode: 0x558a3eea14b0>
+<bytecode: 0x555f776086d8>
 <environment: namespace:utils>
 \end{verbatim}
 
@@ -13588,11 +13575,15 @@ to install the microbenchmark package.
 \end{Shaded}
 
 \begin{verbatim}
-Unit: nanoseconds
-    expr   min    lq  mean median    uq     max neval
-  sum(x)   962   986  1088   1003  1030    7286   100
- sumC(x)  2217  2288 12855   2346  2420 1035082   100
- sumR(x) 35245 35376 59857  35450 35615 2415541   100
+Unit: microseconds
+    expr    min     lq   mean median     uq     max
+  sum(x)  1.030  1.089  1.574  1.135  1.307   23.34
+ sumC(x)  2.412  2.498 12.649  2.669  2.919  965.82
+ sumR(x) 37.202 37.481 74.810 37.844 55.424 2816.64
+ neval
+   100
+   100
+   100
 \end{verbatim}
 
 The \texttt{microbenchmark()} function runs each function it's passed
@@ -14413,16 +14404,16 @@ Let's first make a connection to this table and explore its structure.
 # Database: BigQueryConnection
    thunder mean_wind_speed
    <lgl>             <dbl>
- 1 FALSE              7   
- 2 FALSE             14.5 
- 3 FALSE             28.7 
- 4 FALSE             15.5 
- 5 FALSE              0   
- 6 FALSE             15   
- 7 FALSE             15   
- 8 FALSE             21   
- 9 FALSE              8.90
-10 TRUE              13   
+ 1 FALSE              8   
+ 2 FALSE             17   
+ 3 FALSE              2.20
+ 4 FALSE             11.3 
+ 5 TRUE               7   
+ 6 FALSE             13   
+ 7 TRUE              19.7 
+ 8 TRUE               0.5 
+ 9 FALSE              4.30
+10 FALSE              5   
 \end{verbatim}
 
 First we establish a connection to the weather table. We then use the
@@ -14488,15 +14479,15 @@ with a mean wind speed for each year before 1940.
     year count
    <int> <int>
  1  1932 10751
- 2  1931  9726
- 3  1934 20334
- 4  1935 26829
- 5  1939 65623
+ 2  1929  2037
+ 3  1930  7101
+ 4  1933 17708
+ 5  1938 51770
  6  1936 50514
  7  1937 83310
- 8  1929  2037
- 9  1930  7101
-10  1933 17708
+ 8  1931  9726
+ 9  1934 20334
+10  1935 26829
 # ... with more rows
 \end{verbatim}
 
