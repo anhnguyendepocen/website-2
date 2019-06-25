@@ -167,7 +167,7 @@
 
 \title{R Programming for Data Sciences}
 \author{Andrew O. Finley, Jeffrey W. Doser, Vince Melfi}
-\date{2019-06-13}
+\date{2019-06-14}
 
 \begin{document}
 \maketitle
@@ -531,7 +531,7 @@ but there are better options.
 
 A third way to engage is to read the book while you're at a computer,
 enter the R commands from the book as you read about them, and work on
-the practice exercises at the end of each chapter. You'll likely learn
+the practice problems within many of the chapters. You'll likely learn
 more this way.
 
 A fourth strategy is even better. In addition to reading, entering the
@@ -976,7 +976,7 @@ As we progress in learning R and RStudio, this cheatsheet will become
 more useful. For now you might use the cheatsheet to locate the various
 windows and functions identified in the coming chapters.
 
-\subsection{Practice Exercise}\label{practice-exercise}
+\subsection{Practice Problem}\label{practice-problem}
 
 When running a large program consisting of numerous lines of complicated
 code, it is often basic algebraic typos that lead to the most
@@ -2269,11 +2269,11 @@ females in the data. Later we will learn how to subset using logical
 indices, which is a very powerful way to access desired elements of a
 vector.
 
-\section{Practice Exercise}\label{practice-exercise-1}
+\subsection{Practice Problem}\label{practice-problem-1}
 
 A bad programming technique that often plagues beginners is a technique
 called \emph{hardcoding}. Consider the following simple vector
-containing data on the number of tree species found at diffrent sites.
+containing data on the number of tree species found at different sites.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2602,7 +2602,7 @@ to \texttt{TRUE}. Different R functions have different default
 behaviors, and there are other possible actions. Consulting the help for
 a function provides the details.
 
-\subsection{Practice Exercise}\label{practice-exercise-2}
+\subsection{Practice Problem}\label{practice-problem-2}
 
 Collecting data is often a messy process resulting in multiple errors in
 the data. Consider the following small vector representing the weights
@@ -3879,7 +3879,7 @@ The \texttt{rep()} function replicates the values in a given vector.
  [1] "a" "a" "a" "b" "b" "c" "c" "c" "c" "c" "c" "c"
 \end{verbatim}
 
-\subsection{Practice Exercise}\label{practice-exercise-3}
+\subsection{Practice Problem}\label{practice-problem-3}
 
 Often when using R you will want to simulate data from a specific
 probability distribution (i.e.~normal/Gaussian, bionmial, Poisson). R
@@ -4367,7 +4367,7 @@ coming from \texttt{ggrepel} and which is coming from \texttt{ggplot2}.
 This looks a bit better. We'll resist making additional improvements to
 the figure for now.
 
-\subsection{Practice Exercise}\label{practice-exercise-4}
+\subsection{Practice Problem}\label{practice-problem-4}
 
 You run an experiment to see if the number of alcoholic beverages a
 person has on average every day is related to weight. You collect 15
@@ -4698,7 +4698,7 @@ a convenient way to do this, and also includes advice on creating a good
 example. The more information you provide about your issue, the more
 likely the community is to help you.
 
-\subsection{Practice Exercise}\label{practice-exercise-5}
+\subsection{Practice Problem}\label{practice-problem-5}
 
 Check out the \texttt{ggplot2} cheatsheet found at
 \url{https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf}.
@@ -5268,10 +5268,10 @@ they are specified in the correct order, so
 
 has the same result.
 
-\subsection{Practice Exercises}\label{practice-exercises}
+\subsection{Practice Problems}\label{practice-problems}
 
 \begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
+\def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
   Notice the output value of \texttt{NA} for the column
@@ -5280,10 +5280,17 @@ has the same result.
   column.
 \item
   The \texttt{apply()} family of functions is extremely important in R,
-  so it gets two practice exercises :) Use the \texttt{apply()} function
+  so it gets two Practice Problems :) Use the \texttt{apply()} function
   to compute the median values for all numeric columns in the
   \texttt{iris} data set.
 \end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\OperatorTok{>}\StringTok{ }\KeywordTok{apply}\NormalTok{(WeatherKLAN2014Full[,}\KeywordTok{c}\NormalTok{(}\DecValTok{2}\OperatorTok{:}\DecValTok{19}\NormalTok{, }\DecValTok{21}\NormalTok{, }\DecValTok{23}\NormalTok{)], }\DecValTok{2}\NormalTok{, sd, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)}
+\OperatorTok{>}\StringTok{ }\KeywordTok{apply}\NormalTok{(iris[, }\OperatorTok{-}\DecValTok{5}\NormalTok{], }\DecValTok{2}\NormalTok{, median)}
+\end{Highlighting}
+\end{Shaded}
 
 \subsection{\texorpdfstring{Saving Typing Using
 \texttt{with()}}{Saving Typing Using with()}}\label{saving-typing-using-with}
@@ -5548,16 +5555,16 @@ example, \texttt{a{[}-(2:3){]}} would drop the first two columns of
 \texttt{a}. Some care is needed when removing variables using the
 negative sign.
 
-\subsection{Practice Exercise}\label{practice-exercise-6}
-
-What happens if you write \texttt{a{[}-2:3{]}} instead of
-\texttt{a{[}-(2:3){]}}? Why are the parentheses important here?
-
 An alternative approach is to set the variables you'd like to remove to
 \texttt{NULL}. For example,
 \texttt{a{[}c("y","z"){]}\ \textless{}-\ NULL} and
 \texttt{a{[},2:3{]}\ \textless{}-\ NULL} produce the same result as
 above.
+
+\subsection{Practice Problem}\label{practice-problem-6}
+
+What happens if you write \texttt{a{[}-2:3{]}} instead of
+\texttt{a{[}-(2:3){]}}? Why are the parentheses important here?
 
 \subsection{Transforming Variables}\label{transforming-variables}
 
@@ -5946,7 +5953,7 @@ underscore. This is done using the \texttt{unite()} function.
 9 Albert_Jones income2010  56781
 \end{verbatim}
 
-\subsection{Practice Exercise}\label{practice-exercise-7}
+\subsection{Practice Problem}\label{practice-problem-7}
 
 The \texttt{separate()} function from the \texttt{tidyr} library is
 especially useful when working with real data as multiple pieces of
@@ -6427,7 +6434,7 @@ As usual, a negative sign tells R to leave something out. And there are
 special functions such as \texttt{starts\_with} that provide ways to
 match part of a variable's name.
 
-\subsection{Practice Exercise}\label{practice-exercise-8}
+\subsection{Practice Problem}\label{practice-problem-8}
 
 Use the \texttt{contains()} function to select only the columns that
 contain a \texttt{c}
@@ -6658,7 +6665,7 @@ the message more stark.
 For analyzing data in R, the order shouldn't matter. But for
 presentation to human eyes, the order is important.
 
-\subsection{Practice Exercise}\label{practice-exercise-9}
+\subsection{Practice Problem}\label{practice-problem-9}
 
 It is worth your while to get comfortable with using pipes. Here is some
 hard-to-read code. Convert it into more easier to read code by using
@@ -7209,11 +7216,11 @@ overall, we need to remove the grouping.
 # ... with 1,684 more rows
 \end{verbatim}
 
-\subsection{Practice Exercise}\label{practice-exercise-10}
+\subsection{Practice Problem}\label{practice-problem-10}
 
 As you progress in your data science related career, we are sure you
 will find \texttt{dplyr} as one of the most useful packages for your
-initial data exploration. Here is one more practice exercise to get more
+initial data exploration. Here is one more Practice Problem to get more
 comfortable with the syntax.
 
 Recall the \texttt{iris} data set we have worked with multiple times. We
@@ -7519,7 +7526,7 @@ not specify a value for \texttt{cl} it will silently be set to
 paired_t(corn$kiln_dried, corn$regular, cl = 0.99)
 \end{verbatim}
 
-\subsection{Practice Exercise}\label{practice-exercise-11}
+\subsection{Practice Problem}\label{practice-problem-11}
 
 Like all things in R, getting the hang of writing functions just
 requires practice. Create a simple function called \texttt{FtoK} that is
@@ -8190,7 +8197,7 @@ of the \texttt{vector} in succession, and evaluates the
 In the first case we loop over the positions of the vector elements,
 while in the second case we loop over the elements themselves.
 
-\subsection{Practice Exercise}\label{practice-exercise-12}
+\subsection{Practice Problem}\label{practice-problem-12}
 
 Often when students initially learn about \texttt{if()} statements and
 \texttt{for()} loops, they use them more often than is necessary,
@@ -8308,7 +8315,7 @@ use \texttt{1:n}. Let's see how fast this is.
 
 \begin{verbatim}
    user  system elapsed 
-      0       0       0 
+  0.001   0.000   0.000 
 \end{verbatim}
 
 \begin{Shaded}
@@ -8616,7 +8623,7 @@ function (file, header = TRUE, sep = ",", quote = "\"", dec = ".",
     fill = TRUE, comment.char = "", ...) 
 read.table(file = file, header = header, sep = sep, quote = quote, 
     dec = dec, fill = fill, comment.char = comment.char, ...)
-<bytecode: 0x555654b3f790>
+<bytecode: 0x558a3eea14b0>
 <environment: namespace:utils>
 \end{verbatim}
 
@@ -9319,7 +9326,7 @@ for learning about how to use Google maps web services.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-198-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-200-1.pdf}
 While the call to \texttt{get\_map} can use a bounding box
 (\texttt{mu.bbox} in code above) to define the \texttt{basemap} extent,
 I've found that it's easier to pass it a center point location
@@ -9461,7 +9468,7 @@ take \texttt{geom\_point}'s \texttt{data} argument as a data frame
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-203-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-205-1.pdf}
 
 There is something subtle and easy to miss in the code above. Notice the
 \texttt{aes} function arguments in \texttt{geom\_points} take geographic
@@ -9564,7 +9571,7 @@ accordingly.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-206-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-208-1.pdf}
 
 Let's add the roads and some more descriptive labels as a finishing
 touch. The roads data include a variable called \texttt{type} that
@@ -9633,7 +9640,7 @@ Warning: Removed 616 rows containing missing values
 (geom_path).
 \end{verbatim}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-207-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-209-1.pdf}
 
 The second, and more cryptic, of the two warnings from this code occurs
 because some of the roads extend beyond the range of the map axes and
@@ -9781,7 +9788,7 @@ attr(,"package")
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-211-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-213-1.pdf}
 
 A few things to notice in the code above. First the \texttt{getData}
 function needs the longitude \texttt{lon} and latitude \texttt{lat} to
@@ -9815,7 +9822,7 @@ argument and save the resulting SRTM subset over the larger tile (the
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-212-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-214-1.pdf}
 
 The \texttt{crop} is in effect doing a spatial subsetting of the raster
 data. We'll return to the \texttt{srtm} data and explore different kinds
@@ -9907,7 +9914,7 @@ say we want to select and map all management units in \texttt{mu}, i.e.,
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-215-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-217-1.pdf}
 
 More generally, however, the \texttt{over} function offers consistent
 overlay operations for \texttt{sp} objects and can return either indexes
@@ -10003,7 +10010,7 @@ Warning: Removed 483 rows containing missing values
 (geom_point).
 \end{verbatim}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-218-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-220-1.pdf}
 
 In the call to \texttt{geom\_point} above, \texttt{coords.x1}
 \texttt{coords.x2} are the default names given to longitude and
@@ -10101,7 +10108,7 @@ Joining, by = "id"
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-220-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-222-1.pdf}
 
 The \texttt{aggregate()} function will work with all \texttt{sp}
 objects. For example let's map the variance of pixel values in
@@ -10145,7 +10152,7 @@ Joining, by = "id"
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-221-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-223-1.pdf}
 
 \section{Where to go from here}\label{where-to-go-from-here}
 
@@ -10802,7 +10809,7 @@ the characteristic shape.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-232-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-234-1.pdf}
 
 To make this more concrete, we will consider a data set on a population
 of women who were over 21 years of age, lived near Phoenix, Arizona, and
@@ -10984,7 +10991,7 @@ We can plot the fitted probabilities along with the data ``by hand''.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-237-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-239-1.pdf}
 
 The \texttt{ggplot2} package also provides a way to do this more
 directly, using \texttt{stat\_smooth}.
@@ -10998,7 +11005,7 @@ directly, using \texttt{stat\_smooth}.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-238-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-240-1.pdf}
 
 From these graphics we can see that although glucose level and diabetes
 are related, there are many women with high glucose levels who are not
@@ -11247,7 +11254,7 @@ below.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-243-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-245-1.pdf}
 
 \subsection{More than Two Classes}\label{more-than-two-classes}
 
@@ -11301,7 +11308,7 @@ Fisher's iris data.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-244-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-246-1.pdf}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -11310,7 +11317,7 @@ Fisher's iris data.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-244-2.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-246-2.pdf}
 
 Here the potential predictors are sepal width, sepal length, petal
 width, and petal length. The goal is to find a classifier that will
@@ -11583,7 +11590,7 @@ deviations, so we will not standardize these data before applying kNN.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-250-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-252-1.pdf}
 
 Next a large set of test data is created using the \texttt{expand.grid}
 function, which creates a data frame with all possible combinations of
@@ -11718,7 +11725,7 @@ and the decision boundary.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-253-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-255-1.pdf}
 
 Next we graph the decision boundary of kNN with \(k=1\).
 
@@ -11759,7 +11766,7 @@ Next we graph the decision boundary of kNN with \(k=1\).
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-254-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-256-1.pdf}
 
 \subsection{kNN and the Diabetes Data}\label{knn-and-the-diabetes-data}
 
@@ -11788,7 +11795,7 @@ knn_Pima  No Yes
 At least in terms of the confusion matrix, kNN with \(k=15\) performed
 about as well as logistic regression for these data.
 
-\section{Practice Exercise}\label{practice-exercise-13}
+\subsection{Practice Problem}\label{practice-problem-13}
 
 Produce a figure that displays how the number of false positives
 produced from the kNN classifier for the diabetes data set changes for
@@ -12842,7 +12849,7 @@ been necessary. But regular expressions will be essential going forward,
 so it was worthwhile using regular expressions even if they do not
 provide the most efficient method.)
 
-\subsection{Practice Exercise}\label{practice-exercise-14}
+\subsection{Practice Problem}\label{practice-problem-14}
 
 Use \texttt{strsplit()} and regular expressions to split the following
 strings into their respective words (i.e.~write a regular expression
@@ -12854,11 +12861,6 @@ should be a vector (not a list).
 \OperatorTok{>}\StringTok{ }\NormalTok{strings <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"Once-upon"}\NormalTok{, }\StringTok{"a.time"}\NormalTok{, }\StringTok{"there"}\NormalTok{, }\StringTok{"was-a"}\NormalTok{, }\StringTok{"man.named"}\NormalTok{, }\StringTok{"Bob"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
-
-\begin{verbatim}
- [1] "Once"  "upon"  "a"     "time"  "there" "was"  
- [7] "a"     "man"   "named" "Bob"  
-\end{verbatim}
 
 \subsection{\texorpdfstring{\texttt{nchar}
 Again}{nchar Again}}\label{nchar-again}
@@ -12901,7 +12903,7 @@ the number of letters in each word in the novel.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-283-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-285-1.pdf}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -12927,7 +12929,7 @@ moby_dick
   601   590   587   587   581 
 \end{verbatim}
 
-\subsection{Practice Exercise}\label{practice-exercise-15}
+\subsection{Practice Problem}\label{practice-problem-15}
 
 The goal of this exercise is to generate a wordcloud image of the 50
 most frqeuent words in \emph{Moby Dick} that we identifid above. To do
@@ -12943,7 +12945,7 @@ md.data.frame$Freq, max.words = 500, : the could not be
 fit on page. It will not be plotted.
 \end{verbatim}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-285-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-287-1.pdf}
 
 \subsection{\texorpdfstring{\texttt{substr} and
 \texttt{strtrim}}{substr and strtrim}}\label{substr-and-strtrim}
@@ -13588,9 +13590,9 @@ to install the microbenchmark package.
 \begin{verbatim}
 Unit: nanoseconds
     expr   min    lq  mean median    uq     max neval
-  sum(x)   953   994  1085   1011  1037    6003   100
- sumC(x)  2229  2302 14114   2368  2408 1161305   100
- sumR(x) 36162 36403 63366  36604 36905 2553970   100
+  sum(x)   962   986  1088   1003  1030    7286   100
+ sumC(x)  2217  2288 12855   2346  2420 1035082   100
+ sumR(x) 35245 35376 59857  35450 35615 2415541   100
 \end{verbatim}
 
 The \texttt{microbenchmark()} function runs each function it's passed
@@ -14219,7 +14221,7 @@ are in the database. We can produce a barplot to show this.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-314-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-316-1.pdf}
 
 We first load the \texttt{dbplot} package. Next we produce the bar plot.
 Notice that we can continue to use the convenient
@@ -14256,7 +14258,7 @@ The following object is masked from 'package:dplyr':
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-315-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-317-1.pdf}
 
 \subsection{Using Google BigQuery}\label{using-google-bigquery}
 
@@ -14459,7 +14461,7 @@ the data.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown_files/figure-latex/unnamed-chunk-320-1.pdf}
+\includegraphics{bookdown_files/figure-latex/unnamed-chunk-322-1.pdf}
 
 Upon first glance at this plot, a naive student might think ``Wow! Wind
 speeds have decreased dramatically since the 1930s'', and just accept
@@ -14468,22 +14470,8 @@ data analysts at heart (otherwise you wouldn't be taking this course!),
 we want to explore this further. We might ask why the wind was so high
 in the late 1920s and early 1930s? An average wind speed of above 12
 miles per hour seems pretty high. Let's explore the entries for all
-years in the 1930s and 1920s.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\OperatorTok{>}\StringTok{ }\NormalTok{weather }\OperatorTok{%>%}
-\OperatorTok{+}\StringTok{   }\KeywordTok{select}\NormalTok{(year, mean_wind_speed) }\OperatorTok{%>%}
-\OperatorTok{+}\StringTok{   }\KeywordTok{filter}\NormalTok{(year }\OperatorTok{<}\StringTok{ }\DecValTok{1940} \OperatorTok{&}\StringTok{ }\OperatorTok{!}\KeywordTok{is.na}\NormalTok{(mean_wind_speed)) }\OperatorTok{%>%}
-\OperatorTok{+}\StringTok{   }\KeywordTok{dbplot_histogram}\NormalTok{(mean_wind_speed)}
-\end{Highlighting}
-\end{Shaded}
-
-Well that's interesting. Just from looking at the distribution of the
-average wind speeds for all years lower than 1940 it looks like most
-records have wind speeds lower than 10. We have to keep in mind that we
-may not have the same number of entries for each year. Let's see how
-many records there are with a mean wind speed for each year before 1940.
+years in the 1930s and 1920s by looking at how many records there are
+with a mean wind speed for each year before 1940.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -14513,27 +14501,13 @@ many records there are with a mean wind speed for each year before 1940.
 \end{verbatim}
 
 Interesting! We see that there are only 2037 records from 1929, while
-there are 65623 records from 1939. This could explain the pattern we saw
-in the previous histogram. Let's look at the histogram for 1929 only to
-help confirm this conjecture.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\OperatorTok{>}\StringTok{ }\NormalTok{weather }\OperatorTok{%>%}
-\OperatorTok{+}\StringTok{   }\KeywordTok{select}\NormalTok{(year, mean_wind_speed) }\OperatorTok{%>%}
-\OperatorTok{+}\StringTok{   }\KeywordTok{filter}\NormalTok{(year }\OperatorTok{==}\StringTok{ }\DecValTok{1929} \OperatorTok{&}\StringTok{ }\OperatorTok{!}\KeywordTok{is.na}\NormalTok{(mean_wind_speed)) }\OperatorTok{%>%}
-\OperatorTok{+}\StringTok{   }\KeywordTok{dbplot_histogram}\NormalTok{(mean_wind_speed)}
-\end{Highlighting}
-\end{Shaded}
-
-Just from looking at this graph, we can see that the
-\texttt{mean\_wind\_speed} is closer to 12, which is what we found in
-the original line plot as well. Was the wind in 1929 really that much
-stronger than it is now? Maybe. Or we could be experiencing something
-known as \emph{sampling bias} in which the 2037 records from 1929 are
-not a valid random representation of all the wind speeds occurring in
-1929. Determining whether sampling bias is causing the pattern we see
-requires further investigation, which we leave to you if you so desire.
+there are 65623 records from 1939. This suggests we could be
+experiencing a phenomenon known as \emph{sampling bias} in which the
+2037 records from 1929 are not a valid random representation of all the
+wind speeds occurring in 1929. Or potentially the wind was just much
+higher during that time due to other factors we aren't exploring here.
+Determining the true cause of this pattern requires further
+investigation, which we leave to you if you so desire.
 
 \section{Changing Records in the
 Database}\label{changing-records-in-the-database}
@@ -14590,7 +14564,7 @@ database; perform simple queries using \texttt{dplyr}; use data from a
 database in a Shiny app; learn how to perform changes
 (update/delete/insert) on a database
 
-\chapter{Digial Signal Processing}\label{digial-signal-processing}
+\chapter{Digital Signal Processing}\label{digital-signal-processing}
 
 Signals are everywhere. And no, that is not an exaggeration. In today's
 technology age, signals really are pervasive throughout most of the
@@ -16263,7 +16237,7 @@ R. There are also numerous books and online tutorials available for
 working with these functions, so a simple google search is often the
 best way to find additional help :)
 
-\subsection{Practice Exercise}\label{practice-exercise-16}
+\subsection{Practice Problem}\label{practice-problem-16}
 
 Go to the help page for the \texttt{par()} function (use
 \texttt{help(par)} or \texttt{?par()}). Look at the plethora of
