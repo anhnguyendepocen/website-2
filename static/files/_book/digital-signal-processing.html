@@ -24,7 +24,7 @@
 <meta name="author" content="Andrew O. Finley, Jeffrey W. Doser, Vince Melfi" />
 
 
-<meta name="date" content="2019-06-25" />
+<meta name="date" content="2019-07-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -558,7 +558,7 @@ FIGURE 14.4: Two cedar waxwings, possibly pondering whether or not Ross and Rach
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span><span class="kw">library</span>(warbleR)
 <span class="op">&gt;</span><span class="st"> </span>cedarWax &lt;-<span class="st"> </span><span class="kw">quer_xc</span>(<span class="dt">qword =</span> <span class="st">&quot;Bombycilla cedrorum&quot;</span>,
 <span class="op">+</span><span class="st">                     </span><span class="dt">download =</span> <span class="ot">FALSE</span>)</code></pre></div>
-<pre><code>113 recordings found!</code></pre>
+<pre><code>114 recordings found!</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span><span class="kw">names</span>(cedarWax)</code></pre></div>
 <pre><code> [1] &quot;Recording_ID&quot;      &quot;Genus&quot;            
  [3] &quot;Specific_epithet&quot;  &quot;Subspecies&quot;       
@@ -584,7 +584,7 @@ FIGURE 14.4: Two cedar waxwings, possibly pondering whether or not Ross and Rach
                             call, flight call 
                                             7 
                                          call 
-                                           63 
+                                           64 
                        begging call, juvenile 
                                             3 
                                    alarm call 
@@ -613,7 +613,7 @@ alarm call, call, flight call, juvenile, song
                                             1 
                                   Flight call 
                                             1 </code></pre>
-<p>Look closely at the output from this function. This is a great example of the messiness of real-world data. Users from around the world input their data into this website, and this results in many different ways of describing the vocalizations produced by the birds. You can see the users used many different ways to describe the calls of cedar waxwings. There are 63 recordings labeled as “call” so we will just focus on these recordings, but keep in mind that in a more serious study, we may want to manipulate the labels and combine vocalizations that are actually of the same type.</p>
+<p>Look closely at the output from this function. This is a great example of the messiness of real-world data. Users from around the world input their data into this website, and this results in many different ways of describing the vocalizations produced by the birds. You can see the users used many different ways to describe the calls of cedar waxwings. There are 64 recordings labeled as “call” so we will just focus on these recordings, but keep in mind that in a more serious study, we may want to manipulate the labels and combine vocalizations that are actually of the same type.</p>
 <p>Now that we have the recordings we want to work with, we download them and convert them to wav files. Since this is only an example, we will look specifically at six of the calls within the <code>cedarWax</code> recordings to minimize downloading and computation time.<a href="#fn60" class="footnoteRef" id="fnref60"><sup>60</sup></a></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span>newCedarWax &lt;-<span class="st"> </span><span class="kw">subset</span>(cedarWax, cedarWax<span class="op">$</span>Recording_ID <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">313682</span>, <span class="dv">313683</span>, <span class="dv">313684</span>, <span class="dv">321881</span>, <span class="dv">329907</span>, <span class="dv">361006</span>))
 <span class="op">&gt;</span><span class="st"> </span><span class="kw">quer_xc</span>(<span class="dt">X =</span> newCedarWax)</code></pre></div>

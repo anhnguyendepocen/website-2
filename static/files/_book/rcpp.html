@@ -24,7 +24,7 @@
 <meta name="author" content="Andrew O. Finley, Jeffrey W. Doser, Vince Melfi" />
 
 
-<meta name="date" content="2019-06-25" />
+<meta name="date" content="2019-07-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -579,9 +579,9 @@ x &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">1
 <span class="kw">microbenchmark</span>(<span class="kw">sum</span>(x), <span class="kw">sumC</span>(x), <span class="kw">sumR</span>(x))</code></pre></div>
 <pre><code>Unit: nanoseconds
     expr   min    lq  mean median    uq     max neval
-  sum(x)   967  1008  1073   1029  1082    2198   100
- sumC(x)  2224  2306 10103   2360  2502  748352   100
- sumR(x) 35239 35450 66182  36436 37666 2801886   100</code></pre>
+  sum(x)   957  1008  1062   1030  1050    2494   100
+ sumC(x)  2168  2274  9401   2317  2377  699172   100
+ sumR(x) 35253 35368 61557  35443 35588 2572413   100</code></pre>
 <p>The <code>microbenchmark()</code> function runs each function it’s passed 100 times and provides summary statistics for the multiple execution times. This is a very handy tool for testing various function implementations (as illustrated above).</p>
 </div>
 <div id="vector-input-and-vector-output" class="section level3">
