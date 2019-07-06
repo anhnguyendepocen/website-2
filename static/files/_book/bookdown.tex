@@ -167,7 +167,7 @@
 
 \title{R Programming for Data Sciences}
 \author{Andrew O. Finley, Jeffrey W. Doser, Vince Melfi}
-\date{2019-06-25}
+\date{2019-07-06}
 
 \begin{document}
 \maketitle
@@ -509,7 +509,7 @@ statistical system. We will focus on important topics such as
   Tools for classification problems such as email spam filtering or
   handwritten digit recognition
 \item
-  Programming and wirting functions in R
+  Programming and writing functions in R
 \end{enumerate}
 
 \section{How to learn (The most important section in this
@@ -4630,7 +4630,7 @@ to save your most recent \texttt{ggplot()} to a variety of vector (e.g.,
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{ggplot}\NormalTok{(}\DataTypeTok{filename =} \StringTok{"sin-plot.pdf"}\NormalTok{, }\DataTypeTok{device=}\StringTok{"pdf"}\NormalTok{)}
+\KeywordTok{ggsave}\NormalTok{(}\DataTypeTok{filename =} \StringTok{"sin-plot.pdf"}\NormalTok{, }\DataTypeTok{device=}\StringTok{"pdf"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -8610,7 +8610,7 @@ function (file, header = TRUE, sep = ",", quote = "\"", dec = ".",
     fill = TRUE, comment.char = "", ...) 
 read.table(file = file, header = header, sep = sep, quote = quote, 
     dec = dec, fill = fill, comment.char = comment.char, ...)
-<bytecode: 0x555f776086d8>
+<bytecode: 0x563ca3e036d8>
 <environment: namespace:utils>
 \end{verbatim}
 
@@ -13575,15 +13575,11 @@ to install the microbenchmark package.
 \end{Shaded}
 
 \begin{verbatim}
-Unit: microseconds
-    expr    min     lq   mean median     uq     max
-  sum(x)  1.030  1.089  1.574  1.135  1.307   23.34
- sumC(x)  2.412  2.498 12.649  2.669  2.919  965.82
- sumR(x) 37.202 37.481 74.810 37.844 55.424 2816.64
- neval
-   100
-   100
-   100
+Unit: nanoseconds
+    expr   min    lq  mean median    uq     max neval
+  sum(x)   956  1008  1090   1028  1051    5633   100
+ sumC(x)  2216  2325 12633   2370  2435  995264   100
+ sumR(x) 36544 36702 63128  36805 37040 2574840   100
 \end{verbatim}
 
 The \texttt{microbenchmark()} function runs each function it's passed
@@ -14404,16 +14400,16 @@ Let's first make a connection to this table and explore its structure.
 # Database: BigQueryConnection
    thunder mean_wind_speed
    <lgl>             <dbl>
- 1 FALSE              8   
- 2 FALSE             17   
- 3 FALSE              2.20
- 4 FALSE             11.3 
- 5 TRUE               7   
- 6 FALSE             13   
- 7 TRUE              19.7 
- 8 TRUE               0.5 
- 9 FALSE              4.30
-10 FALSE              5   
+ 1 FALSE              7   
+ 2 FALSE             14.5 
+ 3 FALSE             28.7 
+ 4 FALSE             15.5 
+ 5 FALSE              0   
+ 6 FALSE             15   
+ 7 FALSE             15   
+ 8 FALSE             21   
+ 9 FALSE              8.90
+10 TRUE              13   
 \end{verbatim}
 
 First we establish a connection to the weather table. We then use the
@@ -15080,7 +15076,7 @@ downloading them.
 \end{Shaded}
 
 \begin{verbatim}
-113 recordings found!
+114 recordings found!
 \end{verbatim}
 
 \begin{Shaded}
@@ -15143,7 +15139,7 @@ recordings we have. We will do this using the \texttt{table()} function.
                             call, flight call 
                                             7 
                                          call 
-                                           63 
+                                           64 
                        begging call, juvenile 
                                             3 
                                    alarm call 
@@ -15179,7 +15175,7 @@ of the messiness of real-world data. Users from around the world input
 their data into this website, and this results in many different ways of
 describing the vocalizations produced by the birds. You can see the
 users used many different ways to describe the calls of cedar waxwings.
-There are 63 recordings labeled as ``call'' so we will just focus on
+There are 64 recordings labeled as ``call'' so we will just focus on
 these recordings, but keep in mind that in a more serious study, we may
 want to manipulate the labels and combine vocalizations that are
 actually of the same type.

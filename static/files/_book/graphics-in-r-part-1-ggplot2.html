@@ -24,7 +24,7 @@
 <meta name="author" content="Andrew O. Finley, Jeffrey W. Doser, Vince Melfi" />
 
 
-<meta name="date" content="2019-07-02" />
+<meta name="date" content="2019-07-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -722,7 +722,7 @@ sin.data &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span 
 <div id="saving-graphics" class="section level2">
 <h2><span class="header-section-number">5.6</span> Saving Graphics</h2>
 <p>We often want to export our graphics to use in an external document or share with colleagues. There are several ways to save graphics in a variety of file formats. The <code>ggsave()</code> function will allow you to save your most recent <code>ggplot()</code> to a variety of vector (e.g., “eps”, “ps”, “pdf”, “svg”) or raster (e.g., “jpeg”, “tiff”, “png”, “bmp”, “wmf”) formats.<a href="#fn31" class="footnoteRef" id="fnref31"><sup>31</sup></a> The subsequent call to <code>ggsave()</code> saves the <code>sin.data</code> plot to a pdf file called “sin-plot.pdf”.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">filename =</span> <span class="st">&quot;sin-plot.pdf&quot;</span>, <span class="dt">device=</span><span class="st">&quot;pdf&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggsave</span>(<span class="dt">filename =</span> <span class="st">&quot;sin-plot.pdf&quot;</span>, <span class="dt">device=</span><span class="st">&quot;pdf&quot;</span>)</code></pre></div>
 <p>The <code>ggplot()</code> function takes additional arguments to control scale, measurement units, and raster plot resolution, i.e., dots per inch (dpi).</p>
 </div>
 <div id="more-resources" class="section level2">
