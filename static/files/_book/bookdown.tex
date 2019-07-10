@@ -167,7 +167,7 @@
 
 \title{R Programming for Data Sciences}
 \author{Andrew O. Finley, Jeffrey W. Doser, Vince Melfi}
-\date{2019-07-06}
+\date{2019-07-10}
 
 \begin{document}
 \maketitle
@@ -8610,7 +8610,7 @@ function (file, header = TRUE, sep = ",", quote = "\"", dec = ".",
     fill = TRUE, comment.char = "", ...) 
 read.table(file = file, header = header, sep = sep, quote = quote, 
     dec = dec, fill = fill, comment.char = comment.char, ...)
-<bytecode: 0x563ca3e036d8>
+<bytecode: 0x5655189785d8>
 <environment: namespace:utils>
 \end{verbatim}
 
@@ -13577,9 +13577,9 @@ to install the microbenchmark package.
 \begin{verbatim}
 Unit: nanoseconds
     expr   min    lq  mean median    uq     max neval
-  sum(x)   956  1008  1090   1028  1051    5633   100
- sumC(x)  2216  2325 12633   2370  2435  995264   100
- sumR(x) 36544 36702 63128  36805 37040 2574840   100
+  sum(x)   965  1027  1136   1072  1123    5260   100
+ sumC(x)  2239  2353 12543   2456  2554  978278   100
+ sumR(x) 35303 35509 66503  37153 37871 2744137   100
 \end{verbatim}
 
 The \texttt{microbenchmark()} function runs each function it's passed
@@ -14474,13 +14474,13 @@ with a mean wind speed for each year before 1940.
 # Database: BigQueryConnection
     year count
    <int> <int>
- 1  1932 10751
- 2  1929  2037
- 3  1930  7101
- 4  1933 17708
- 5  1938 51770
- 6  1936 50514
- 7  1937 83310
+ 1  1929  2037
+ 2  1930  7101
+ 3  1933 17708
+ 4  1938 51770
+ 5  1936 50514
+ 6  1937 83310
+ 7  1932 10751
  8  1931  9726
  9  1934 20334
 10  1935 26829
@@ -14531,9 +14531,9 @@ working with databases in R, and it will also work with a variety of
 databases and other datasources (i.e.~Spark). This Connections Pane is a
 great way of exploring the data in a data source once you are connected.
 If interested, the page
-\href{/href\%7Bhttps://support.rstudio.com/hc/en-us/articles/115010915687}{here}
-provides a good overview of how to get the most out of these
-connections.
+\href{https://db.rstudio.com/rstudio/connections/}{here} which provides
+an overview of the connections pane and some other useful links of
+potential interest.
 
 \section{Further Resources}\label{further-resources}
 

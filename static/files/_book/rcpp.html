@@ -24,7 +24,7 @@
 <meta name="author" content="Andrew O. Finley, Jeffrey W. Doser, Vince Melfi" />
 
 
-<meta name="date" content="2019-07-06" />
+<meta name="date" content="2019-07-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -577,11 +577,11 @@ a</code></pre></div>
 
 x &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">1000</span>)
 <span class="kw">microbenchmark</span>(<span class="kw">sum</span>(x), <span class="kw">sumC</span>(x), <span class="kw">sumR</span>(x))</code></pre></div>
-<pre><code>Unit: nanoseconds
-    expr   min      lq  mean median    uq     max
-  sum(x)   958   994.5  1047   1024  1048    2310
- sumC(x)  2137  2290.0 12749   2334  2381 1034191
- sumR(x) 35328 35449.0 64829  35546 35836 2806534
+<pre><code>Unit: microseconds
+    expr    min     lq  mean median     uq     max
+  sum(x)  1.032  1.077  1.26  1.098  1.122   14.06
+ sumC(x)  2.333  2.431 10.67  2.480  2.545  804.07
+ sumR(x) 37.210 37.429 71.41 37.520 37.942 3145.90
  neval
    100
    100
