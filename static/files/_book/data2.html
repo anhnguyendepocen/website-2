@@ -24,7 +24,7 @@
 <meta name="author" content="Andrew O. Finley, Jeffrey W. Doser, Vince Melfi" />
 
 
-<meta name="date" content="2019-07-10" />
+<meta name="date" content="2019-07-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -402,7 +402,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="data2" class="section level1">
 <h1><span class="header-section-number">Chapter 6</span> Working with Data</h1>
-<p>Bringing data into R, exporting data from R in a form that is readable by other software, cleaning and reshaping data, and other data manipulation tasks are an important and often overlooked component of data science. The book <span class="citation">Spector (<a href="#ref-SpectorDataManipulation">2008</a>)</span>, while a few years old, is still an excellent reference for data-related issues. And the  manual, available online at , is an up-to-date (and free) reference on importing a wide variety of datasets into R and on exporting data in various forms.</p>
+<p>Bringing data into R, exporting data from R in a form that is readable by other software, cleaning and reshaping data, and other data manipulation tasks are an important and often overlooked component of data science. The book <span class="citation">Spector (<a href="#ref-SpectorDataManipulation">2008</a>)</span>, while a few years old, is still an excellent reference for data-related issues. And the  manual, available online at <a href="http://catalog.lib.msu.edu/record=b7254984~S39a" class="uri">http://catalog.lib.msu.edu/record=b7254984~S39a</a> , is an up-to-date (and free) reference on importing a wide variety of datasets into R and on exporting data in various forms.</p>
 <div id="reading-data-into-r" class="section level2">
 <h2><span class="header-section-number">6.1</span> Reading Data into R</h2>
 <p>Data come in a dizzying variety of forms. It might be in a proprietary format such as an <a href="https://en.wikipedia.org/wiki/Microsoft_Excel">.xlsx</a> Excel file, a <a href="https://en.wikipedia.org/wiki/SPSS">.sav</a> SPSS file, or a <a href="https://en.wikipedia.org/wiki/Minitab">.mtw</a> Minitab file. It might be structured using a <a href="https://en.wikipedia.org/wiki/Relational_model%7D%7Brelational%20model">relational model</a> comprising many tables that need to be connected via key-value pairs. It might be a data-interchange format such as <a href="http://www.json.org/">JSON</a> (JavaScript Object Notation), or a markup language such as <a href="https://en.wikipedia.org/wiki/XML">XML</a> (Extensible Markup Language), perhaps with specialized standards for describing ecological information, see <a href="https://en.wikipedia.org/wiki/Ecological_Metadata_Language">EML</a> (Ecological Metadata Language). Both XML and EML are common data metadata formats (i.e., data that provides information about other data). Fortunately many datasets are (or can be) saved as plain text files, and most software can both read and write such files, so our initial focus will be on reading plain text files into R and saving data from R in plain text format. RStudio provides a handy <a href="http://www.rstudio.com/resources/cheatsheets">data import cheat sheet</a> for many of the read functions detailed in this section.</p>
