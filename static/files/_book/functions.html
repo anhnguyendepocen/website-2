@@ -24,7 +24,7 @@
 <meta name="author" content="Andrew O. Finley, Jeffrey W. Doser, Vince Melfi" />
 
 
-<meta name="date" content="2019-07-29" />
+<meta name="date" content="2019-08-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -865,7 +865,7 @@ $ucl
 <p>Of course another way to create a vector of integers from 1 to n is to use <code>1:n</code>. Let’s see how fast this is.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span><span class="kw">system.time</span>(<span class="dv">1</span><span class="op">:</span>n)</code></pre></div>
 <pre><code>   user  system elapsed 
-  0.001   0.000   0.005 </code></pre>
+  0.000   0.000   0.001 </code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span>n &lt;-<span class="st"> </span><span class="dv">1000000</span>
 <span class="op">&gt;</span><span class="st"> </span><span class="kw">system.time</span>(<span class="dv">1</span><span class="op">:</span>n)      </code></pre></div>
 <pre><code>   user  system elapsed 
@@ -982,7 +982,7 @@ M = \left(\begin{array}{ccc}
     fill = TRUE, comment.char = &quot;&quot;, ...) 
 read.table(file = file, header = header, sep = sep, quote = quote, 
     dec = dec, fill = fill, comment.char = comment.char, ...)
-&lt;bytecode: 0x55ec00114670&gt;
+&lt;bytecode: 0x55c6dfc94a70&gt;
 &lt;environment: namespace:utils&gt;</code></pre>
 </div>
 <div id="lazy-evaluation" class="section level3">
