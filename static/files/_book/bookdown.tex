@@ -167,7 +167,7 @@
 
 \title{R Programming for Data Sciences}
 \author{Andrew O. Finley, Jeffrey W. Doser, Vince Melfi}
-\date{2019-08-02}
+\date{2019-08-15}
 
 \begin{document}
 \maketitle
@@ -178,13 +178,6 @@
 %\cleardoublepage\newpage\thispagestyle{empty}\null
 %\cleardoublepage\newpage
 \thispagestyle{empty}
-
-\begin{center}
-To my son,
-
-without whom I should have finished this book two years earlier
-%\includegraphics{images/dedication.pdf}
-\end{center}
 
 \setlength{\abovedisplayskip}{-5pt}
 \setlength{\abovedisplayshortskip}{-5pt}
@@ -8303,7 +8296,7 @@ use \texttt{1:n}. Let's see how fast this is.
 
 \begin{verbatim}
    user  system elapsed 
-      0       0       0 
+  0.000   0.000   0.005 
 \end{verbatim}
 
 \begin{Shaded}
@@ -8611,7 +8604,7 @@ function (file, header = TRUE, sep = ",", quote = "\"", dec = ".",
     fill = TRUE, comment.char = "", ...) 
 read.table(file = file, header = header, sep = sep, quote = quote, 
     dec = dec, fill = fill, comment.char = comment.char, ...)
-<bytecode: 0x560439312430>
+<bytecode: 0x55a04e1a8c80>
 <environment: namespace:utils>
 \end{verbatim}
 
@@ -13578,9 +13571,9 @@ to install the microbenchmark package.
 \begin{verbatim}
 Unit: nanoseconds
     expr   min    lq  mean median    uq     max neval
-  sum(x)   958  1010  1313   1024  1048   24531   100
- sumC(x)  2233  2326 14344   2393  2463 1144084   100
- sumR(x) 36827 37133 65052  37352 39131 2473100   100
+  sum(x)   959  1011  1189   1058  1100    5857   100
+ sumC(x)  2235  2385 11604   2462  2572  891427   100
+ sumR(x) 35327 36566 70930  37531 38506 2500839   100
 \end{verbatim}
 
 The \texttt{microbenchmark()} function runs each function it's passed
@@ -14276,6 +14269,15 @@ most often in Shakespeare's works.
 \OperatorTok{+}\StringTok{ }\NormalTok{)}
 \OperatorTok{>}\StringTok{ }\NormalTok{shakespeare <-}\StringTok{ }\NormalTok{con }\OperatorTok{%>%}
 \OperatorTok{+}\StringTok{   }\KeywordTok{tbl}\NormalTok{(}\StringTok{"shakespeare"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+Auto-refreshing stale OAuth token.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \OperatorTok{>}\StringTok{ }\NormalTok{shakespeare }\OperatorTok{%>%}
 \OperatorTok{+}\StringTok{   }\KeywordTok{group_by}\NormalTok{(word) }\OperatorTok{%>%}
 \OperatorTok{+}\StringTok{   }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{n =} \KeywordTok{sum}\NormalTok{(word_count, }\DataTypeTok{na.rm =} \OtherTok{TRUE}\NormalTok{)) }\OperatorTok{%>%}
@@ -14475,16 +14477,16 @@ with a mean wind speed for each year before 1940.
 # Database: BigQueryConnection
     year count
    <int> <int>
- 1  1936 50514
- 2  1937 83310
- 3  1932 10751
- 4  1929  2037
- 5  1930  7101
- 6  1933 17708
- 7  1938 51770
- 8  1931  9726
- 9  1934 20334
-10  1935 26829
+ 1  1932 10751
+ 2  1931  9726
+ 3  1934 20334
+ 4  1935 26829
+ 5  1939 65623
+ 6  1929  2037
+ 7  1930  7101
+ 8  1933 17708
+ 9  1938 51770
+10  1936 50514
 # ... with more rows
 \end{verbatim}
 

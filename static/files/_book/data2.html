@@ -24,7 +24,7 @@
 <meta name="author" content="Andrew O. Finley, Jeffrey W. Doser, Vince Melfi" />
 
 
-<meta name="date" content="2019-08-02" />
+<meta name="date" content="2019-08-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1419,7 +1419,8 @@ Mean.Sea.Level.PressureIn  Min.Sea.Level.PressureIn
 <div id="practice-problem-9" class="section level3">
 <h3><span class="header-section-number">6.7.7</span> Practice Problem</h3>
 <p>It is worth your while to get comfortable with using pipes. Here is some hard-to-read code. Convert it into more easier to read code by using pipes.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span><span class="kw">arrange</span>(<span class="kw">select</span>(<span class="kw">filter</span>(gm, country <span class="op">==</span><span class="st"> &quot;Afghanistan&quot;</span>), <span class="kw">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;lifeExp&quot;</span>)), <span class="kw">desc</span>(lifeExp))</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span><span class="kw">arrange</span>(<span class="kw">select</span>(<span class="kw">filter</span>(gm, country <span class="op">==</span><span class="st"> &quot;Afghanistan&quot;</span>), 
+<span class="op">&gt;</span><span class="st">                </span><span class="kw">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;lifeExp&quot;</span>)), <span class="kw">desc</span>(lifeExp))</code></pre></div>
 <pre><code># A tibble: 12 x 2
     year lifeExp
    &lt;int&gt;   &lt;dbl&gt;
