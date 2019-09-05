@@ -24,7 +24,7 @@
 <meta name="author" content="Andrew O. Finley, Jeffrey W. Doser, Vince Melfi" />
 
 
-<meta name="date" content="2019-06-14" />
+<meta name="date" content="2019-08-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -535,7 +535,7 @@ FIGURE 14.3: Different available filters within the seewave package
 <p>Let’s explore more of the parameters for this function to get a better understanding of how it is working. Type in <code>?spectro</code> in the R console. The <code>spectro()</code> function contains a lot of different arguments that allow you to control how the spectrogram is created. The <code>f</code> argument allows you to specify the sampling rate of your sound object. The <code>wl</code> option allows you to control the window length that is used when the successive DFTs are produced (aka the STFT). You can choose which window you want to use with the <code>wn</code> option. You can also specify the amount of <code>ovlp</code> between two successive windows with the <code>ovlp</code> argument. Let’s use some of these arguments and compare it to the standard spectrogram we previously produced.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span><span class="kw">spectro</span>(tico, <span class="dt">f =</span> <span class="dv">22050</span>, <span class="dt">wl =</span> <span class="dv">1024</span>, <span class="dt">wn =</span> <span class="st">&quot;bartlett&quot;</span>, <span class="dt">ovlp =</span> <span class="dv">5</span>)</code></pre></div>
 <p><img src="bookdown_files/figure-html/unnamed-chunk-331-1.png" width="100%" /></p>
-<p>You can immediately see that there are some slight differences between the spectrograms. The first spectrogram appears to be more precise than the first spectrogram. Explore these parameters yourself to get a better understanding of how these different properties impact the short-time fourier transform and the spectrogram.</p>
+<p>You can immediately see that there are some slight differences between the spectrograms. The first spectrogram appears to be more precise than the second spectrogram. Explore these parameters yourself to get a better understanding of how these different properties impact the short-time fourier transform and the spectrogram.</p>
 <p>One cool thing about the <code>spectro()</code> function is that it produces a graph, but it also stores the values along the three scales. If you save the call to a <code>spectro()</code> function, that variable will be a list containing the values along the time axis, values along the frequency axis, and the amplitude values of the FFT decompositions. These values can be accessed in familiar ways (<code>$time</code>, <code>$frequency</code>, <code>$amp</code>).</p>
 <p>Now that you have a visualization of the sound, we will use the <code>tuneR</code> package to play the sound so you can see exactly how it matches up with the spectrogram. First install the <code>tuneR</code> package, which is another package great for working with sound and signals in R. Then use the <code>play</code> function to play back the <code>tico</code> sound. Note that the second argument in the <code>play</code> function is the <code>player</code> argument, which may or may not need to be defined depending on your operating system and what audio players are installed on your system. In my case, I am playing the sound through the <code>aplay</code> player on a machine running Linux.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span><span class="kw">library</span>(tuneR)
@@ -558,7 +558,7 @@ FIGURE 14.4: Two cedar waxwings, possibly pondering whether or not Ross and Rach
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span><span class="kw">library</span>(warbleR)
 <span class="op">&gt;</span><span class="st"> </span>cedarWax &lt;-<span class="st"> </span><span class="kw">quer_xc</span>(<span class="dt">qword =</span> <span class="st">&quot;Bombycilla cedrorum&quot;</span>,
 <span class="op">+</span><span class="st">                     </span><span class="dt">download =</span> <span class="ot">FALSE</span>)</code></pre></div>
-<pre><code>113 recordings found!</code></pre>
+<pre><code>114 recordings found!</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span><span class="kw">names</span>(cedarWax)</code></pre></div>
 <pre><code> [1] &quot;Recording_ID&quot;      &quot;Genus&quot;            
  [3] &quot;Specific_epithet&quot;  &quot;Subspecies&quot;       
@@ -584,7 +584,7 @@ FIGURE 14.4: Two cedar waxwings, possibly pondering whether or not Ross and Rach
                             call, flight call 
                                             7 
                                          call 
-                                           63 
+                                           64 
                        begging call, juvenile 
                                             3 
                                    alarm call 
@@ -613,7 +613,7 @@ alarm call, call, flight call, juvenile, song
                                             1 
                                   Flight call 
                                             1 </code></pre>
-<p>Look closely at the output from this function. This is a great example of the messiness of real-world data. Users from around the world input their data into this website, and this results in many different ways of describing the vocalizations produced by the birds. You can see the users used many different ways to describe the calls of cedar waxwings. There are 63 recordings labeled as “call” so we will just focus on these recordings, but keep in mind that in a more serious study, we may want to manipulate the labels and combine vocalizations that are actually of the same type.</p>
+<p>Look closely at the output from this function. This is a great example of the messiness of real-world data. Users from around the world input their data into this website, and this results in many different ways of describing the vocalizations produced by the birds. You can see the users used many different ways to describe the calls of cedar waxwings. There are 64 recordings labeled as “call” so we will just focus on these recordings, but keep in mind that in a more serious study, we may want to manipulate the labels and combine vocalizations that are actually of the same type.</p>
 <p>Now that we have the recordings we want to work with, we download them and convert them to wav files. Since this is only an example, we will look specifically at six of the calls within the <code>cedarWax</code> recordings to minimize downloading and computation time.<a href="#fn60" class="footnoteRef" id="fnref60"><sup>60</sup></a></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span>newCedarWax &lt;-<span class="st"> </span><span class="kw">subset</span>(cedarWax, cedarWax<span class="op">$</span>Recording_ID <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">313682</span>, <span class="dv">313683</span>, <span class="dv">313684</span>, <span class="dv">321881</span>, <span class="dv">329907</span>, <span class="dv">361006</span>))
 <span class="op">&gt;</span><span class="st"> </span><span class="kw">quer_xc</span>(<span class="dt">X =</span> newCedarWax)</code></pre></div>
@@ -738,14 +738,14 @@ gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
 "github": false,
-"facebook": true,
-"twitter": true,
+"facebook": false,
+"twitter": false,
 "google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": {}
 },
 "fontsettings": {
 "theme": "white",

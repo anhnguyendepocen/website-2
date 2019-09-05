@@ -8,15 +8,15 @@ education:
     year: Current
   - course: MS in Applied Statistics
     institution: Michigan State University
-    year: Expected May 2020
+    year: Expected December 2020
   - course: B.S. in Biology and Mathematics
     institution: State University of New York at Geneseo
     year: 2018
 email: ""
 interests:
 - Bayesian Modelling
-- Ecoacoustics
-- Environmental Modelling
+- Environmental Statistics
+- Wildlife Management
 name: Jeff Doser
 organizations:
 - name: Michigan State University
@@ -38,4 +38,4 @@ user_groups:
 - Visitors
 ---
 
-I am a doctoral student at Michigan State University in the [Geospatial Lab](http://blue.for.msu.edu/) of Dr. Andrew Finley. My research interests lie in the development of Bayesian hierarchical models for environmental monitoring and decision making. I am currently focusing on developing Bayesian models to answer questions in the field of environmental acoustics. 
+I am a doctoral student at Michigan State University in the [Geospatial Lab](http://blue.for.msu.edu/) of Dr. Andrew Finley. My research interests lie in the development of Bayesian hierarchical models for environmental monitoring and decision making. More specifically, I am interested in the development and application of statistical models for methods of monitoring wildlife populations across large spatio-temporal regions, including citizen science data and acoustic recordings. 

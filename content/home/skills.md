@@ -27,9 +27,9 @@ subtitle = ""
   description = "100%"  
   
 [[feature]]
-  icon = "microphone"
+  icon = "crow"
   icon_pack = "fas"
-  name = "Ecoacoustics"
+  name = "Wildlife"
   description = "100%"
 
 +++

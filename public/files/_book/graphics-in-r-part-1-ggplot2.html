@@ -24,7 +24,7 @@
 <meta name="author" content="Andrew O. Finley, Jeffrey W. Doser, Vince Melfi" />
 
 
-<meta name="date" content="2019-06-14" />
+<meta name="date" content="2019-08-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -423,13 +423,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span><span class="kw">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)</code></pre></div>
 <p>Once this is done the package is installed on the local hard drive, and we can use the <code>library</code> function to make the package available during the current R session.</p>
 <p>Next a basic scatter plot is drawn. We’ll keep the focus on sepal length and width, but of course similar plots could be drawn using petal length and width. The prompt is not displayed below, since the continuation prompt <code>+</code> can cause confusion.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)</code></pre></div>
-<pre><code>Registered S3 methods overwritten by &#39;ggplot2&#39;:
-  method         from 
-  [.quosures     rlang
-  c.quosures     rlang
-  print.quosures rlang</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width)) <span class="op">+</span><span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+<span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width)) <span class="op">+</span><span class="st"> </span>
 <span class="st">    </span><span class="kw">geom_point</span>()</code></pre></div>
 <p><img src="bookdown_files/figure-html/unnamed-chunk-58-1.png" width="672" /></p>
 <p>In this case the first argument to the <code>ggplot</code> function is the name of the data frame. Second, the <code>aes</code> (short for aesthetics) function specifies the mapping to the <code>x</code> and <code>y</code> axes. By itself the <code>ggplot</code> function as written doesn’t tell R what sort of graphical display is desired. That is done by adding a <code>geom</code> (short for geometry) specification, in this case <code>geom_point</code>.</p>
@@ -727,7 +722,7 @@ sin.data &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span 
 <div id="saving-graphics" class="section level2">
 <h2><span class="header-section-number">5.6</span> Saving Graphics</h2>
 <p>We often want to export our graphics to use in an external document or share with colleagues. There are several ways to save graphics in a variety of file formats. The <code>ggsave()</code> function will allow you to save your most recent <code>ggplot()</code> to a variety of vector (e.g., “eps”, “ps”, “pdf”, “svg”) or raster (e.g., “jpeg”, “tiff”, “png”, “bmp”, “wmf”) formats.<a href="#fn31" class="footnoteRef" id="fnref31"><sup>31</sup></a> The subsequent call to <code>ggsave()</code> saves the <code>sin.data</code> plot to a pdf file called “sin-plot.pdf”.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">filename =</span> <span class="st">&quot;sin-plot.pdf&quot;</span>, <span class="dt">device=</span><span class="st">&quot;pdf&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggsave</span>(<span class="dt">filename =</span> <span class="st">&quot;sin-plot.pdf&quot;</span>, <span class="dt">device=</span><span class="st">&quot;pdf&quot;</span>)</code></pre></div>
 <p>The <code>ggplot()</code> function takes additional arguments to control scale, measurement units, and raster plot resolution, i.e., dots per inch (dpi).</p>
 </div>
 <div id="more-resources" class="section level2">
@@ -793,14 +788,14 @@ gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
 "github": false,
-"facebook": true,
-"twitter": true,
+"facebook": false,
+"twitter": false,
 "google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": {}
 },
 "fontsettings": {
 "theme": "white",

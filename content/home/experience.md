@@ -25,6 +25,11 @@ date_format = "Jan 2006"
   date_start = "2018-07-01"
   date_end = ""
   description = """
+  Courses: 
+  
+  * FOR 472: Ecological Monitoring and Data Analysis
+  * FOR/STT 875: R Programming for Data Sciences
+  
   Responsibilities include:
   
   * Development of course textbook

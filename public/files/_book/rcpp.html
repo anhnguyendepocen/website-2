@@ -24,7 +24,7 @@
 <meta name="author" content="Andrew O. Finley, Jeffrey W. Doser, Vince Melfi" />
 
 
-<meta name="date" content="2019-06-14" />
+<meta name="date" content="2019-08-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -577,11 +577,11 @@ a</code></pre></div>
 
 x &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">1000</span>)
 <span class="kw">microbenchmark</span>(<span class="kw">sum</span>(x), <span class="kw">sumC</span>(x), <span class="kw">sumR</span>(x))</code></pre></div>
-<pre><code>Unit: microseconds
-    expr    min     lq   mean median     uq     max
-  sum(x)  1.031  1.094  1.352  1.137  1.270   13.93
- sumC(x)  2.356  2.484 11.408  2.548  2.675  842.59
- sumR(x) 48.304 48.648 84.409 48.843 50.120 3243.00
+<pre><code>Unit: nanoseconds
+    expr   min      lq  mean median    uq     max
+  sum(x)   950   992.5  1060   1026  1064    2249
+ sumC(x)  2230  2327.0 10840   2398  2526  810494
+ sumR(x) 35385 35562.5 66478  35946 37612 2734015
  neval
    100
    100
@@ -683,14 +683,14 @@ gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
 "github": false,
-"facebook": true,
-"twitter": true,
+"facebook": false,
+"twitter": false,
 "google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": {}
 },
 "fontsettings": {
 "theme": "white",

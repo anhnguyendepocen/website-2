@@ -10,7 +10,7 @@ featured: false
 links:
 location: Brighton, England
 math: true
-publishDate: "2019-08-31T09:00:00Z"
+publishDate: "2019-09-04T16:15:00Z"
 summary: XXVII International Bioacoustics Congress Talk
 tags: []
 title: XXVII International Bioacoustics Congress
