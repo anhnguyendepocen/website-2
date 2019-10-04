@@ -13,7 +13,7 @@ math: true
 publishDate: "2019-05-20T00:00:00Z"
 summary: Northeast Regional Environmental Acoustics Symposium Talk
 tags: []
-title: Northeast Regional Environmental Acoustics Symposium
+title: Characterizing functional relationships between biophony and technophony
 url_code: ""
 url_pdf: ""
 url_slides: ""

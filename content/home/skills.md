@@ -22,13 +22,11 @@ subtitle = ""
 [[feature]]
   icon = "chart-line"
   icon_pack = "fas"
-  name = "Statistics"
-  description = "100%"  
+  name = "Bayesian Statistics"
   
 [[feature]]
   icon = "crow"
   icon_pack = "fas"
   name = "Wildlife Ecology"
-  description = "100%"
 
 +++

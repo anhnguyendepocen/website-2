@@ -84,7 +84,7 @@
     </item>
     
     <item>
-      <title>XXVII International Bioacoustics Congress</title>
+      <title>Using hierarchical Bayesian models to analyze acoustic data</title>
       <link>/talk/ibac2019/</link>
       <pubDate>Wed, 04 Sep 2019 16:15:00 +0000</pubDate>
       
@@ -93,7 +93,7 @@
     </item>
     
     <item>
-      <title>Northeast Regional Environmental Acoustics Symposium</title>
+      <title>Characterizing functional relationships between biophony and technophony</title>
       <link>/talk/example/</link>
       <pubDate>Wed, 29 May 2019 10:15:00 +0000</pubDate>
       
@@ -102,17 +102,35 @@
     </item>
     
     <item>
-      <title>Soundscape Response to a Selective Logging</title>
+      <title>Assessing Soundscape Disturbance using Hierarchical Bayesian Models</title>
       <link>/project/internal-project/</link>
       <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/project/internal-project/</guid>
-      <description>&lt;p&gt;I am currently analyzing a soundscape data set collected by Stuart Gage. The data consist of recordings that occur at 13 sites in the Twin Lakes, Michigan area. Four of these sites were exposed to a selective logging in 2014. Recordings were obtained prior to and after the recording. I seek to answer the following questions:&lt;/p&gt;
+      <description>&lt;p&gt;Assessing the effects of anthropogenic disturbances on wildlife and natural resources is a necessary conservation task. The soundscape is an important natural resource for acoustically communicating organisms as well as humans, but the use of the soundscape as a tool for assessing disturbance impacts has been relatively unexplored until recently. We are currently developing a broad modeling framework for assessing disturbance impacts on soundscapes, which we apply to describe the influence of a selection logging on soundscapes in northern Michigan to answer the following questions:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;What was the immediate impact of a selective logging on the dawn chorus soundscapes?&lt;/li&gt;
-&lt;li&gt;What is the long-term impact of the selective logging on the soundscapes? Have the soundscapes been able to recover to their original diversity prior to the logging?&lt;/li&gt;
-&lt;li&gt;How has the composition of the soundscapes changed as a result of the logging? Are certain frequencies more dominant in soundscapes after the logging than before?&lt;/li&gt;
+&lt;li&gt;What is the impact of the selection logging on the soundscape?&lt;/li&gt;
+&lt;li&gt;How has the composition of the soundscape changed as a result of the logging?&lt;/li&gt;
+&lt;li&gt;What do answers to the above questions suggest about the impact of the selection logging on avian diversity?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Recordings were obtained at 13 total sites before and after a selection logging. Four sites were in the logging region and nine sites served as control recordings outside of the logging region. We quantify the soundscapes using common acoustic indices (Normalized Difference Soundscape Index NDSI), Acoustic Entropy (H), Acoustic Complexity Index (ACI), Acoustic Evenness Index (AEI), Welch Power Spectral Density (PSD)) and build two hierarchical Bayesian models to describe the changes in the soundscape over the study period. The approach accommodates inherent differences in control and treatment sites to improve reliability of the estimated treatment effects, while also accounting for extraneous variables (i.e. rain) that influence acoustic indices.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Breeding Landbird Monitoring in Northeast Temperate Network parks</title>
+      <link>/project/netn/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/project/netn/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;https://www.nps.gov/im/netn/breeding-landbirds.htm&#34; target=&#34;_blank&#34;&gt;Northeast Temperate Inventory and Monitoring Network (NETN)&lt;/a&gt; of the National Park Service (NPS) consists of 13 parks in the Northeastern United States. As breeding landbirds are important components of park ecosystems and are very popular among park visitors, the NETN has implmented a volunteer-based breeding landbird monitoring program over the last 13 years to provide insight on the trends of the avian communities in each of these parks. Volunteer birders collect data using traditional point-count surveys, where they mark each bird they observe, estimate how far they are from the bird, and record the time of the first sighting of each individual bird. Because this is a volunteer based survey, we require a protocol that is not too labor intensive for the volunteers, while also enabling estimation of population trends of important species of interest. The NETN protocol enables estimation of avian abundance and trends over time through the use of removal sampling and distance sampling models to account for each observer not detecting every bird present at a given point count location. However, it is likely that a model using information from both sampling protocols within a dynamic Markov modeling framework will improve inference and estimation of avian population trends. We are currently in development of a dynamic, multispecies hierarchical model that uses data regarding the distance of an individual bird to the observer and the timing of first detection of an individual bird to improve inference on trends in avian species abundance over time. Specifically, we seek to&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Determine the rate of change in abundance of important avian species of interest in each NETN park.&lt;/li&gt;
+&lt;li&gt;Display how using a combined distance sampling and removal sampling approach in a single, multi-species dynamic model can improve inference on the estimated rate of change of different avian species of interest compared to using each modeling protocol separately.&lt;/li&gt;
+&lt;li&gt;Determine the influence of silvicultural practices and habitat variables on avian abundance.&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>

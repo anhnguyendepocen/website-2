@@ -11,9 +11,9 @@ links:
 location: Brighton, England
 math: true
 publishDate: "2019-09-04T16:15:00Z"
-summary: XXVII International Bioacoustics Congress Talk
+summary: XXVII International Bioacoustics Congress
 tags: []
-title: XXVII International Bioacoustics Congress
+title: Using hierarchical Bayesian models to analyze acoustic data
 url_code: ""
 url_pdf: ""
 url_slides: ""
