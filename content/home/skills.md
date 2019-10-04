@@ -17,8 +17,7 @@ subtitle = ""
 [[feature]]
   icon = "r-project"
   icon_pack = "fab"
-  name = "R"
-  description = "100%"
+  name = "R Programming"
   
 [[feature]]
   icon = "chart-line"
@@ -29,7 +28,7 @@ subtitle = ""
 [[feature]]
   icon = "crow"
   icon_pack = "fas"
-  name = "Wildlife"
+  name = "Wildlife Ecology"
   description = "100%"
 
 +++

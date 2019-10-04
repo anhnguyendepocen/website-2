@@ -17,11 +17,23 @@ date_format = "Jan 2006"
 #   Required fields are `title`, `company`, and `date_start`.
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
+
+[[experience]]
+  title = "Statistical Consultant"
+  company = "Michigan State University College of Agriculture and Natural Resources"
+  company_url = "https://scc.anr.msu.edu/"
+  location = "East Lansing, Michigan"
+  date_start = "2019-09-01"
+  date_end = ""
+  description = """
+  Provide statistical and programming advice to graduate students, technicians, and faculty members employed by the College of Agriculture and Natural Resources or with AgBioResearch.
+  """
+  
 [[experience]]
   title = "Teaching Assistant"
   company = "Michigan State University"
   company_url = ""
-  location = "Michigan"
+  location = "East Lansing, Michigan"
   date_start = "2018-07-01"
   date_end = ""
   description = """
@@ -41,7 +53,7 @@ date_format = "Jan 2006"
   title = "Database Programmer"
   company = "State University of New York at Geneseo"
   company_url = ""
-  location = "New York"
+  location = "Geneseo, New York"
   date_start = "2016-08-01"
   date_end = "2018-05-31"
   description = """Developed, modified, and tested Banner applications using SQL, Groovy, SQR, and the Argos Enterprise Reporting System"""
