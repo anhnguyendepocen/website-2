@@ -10,24 +10,22 @@ featured: false
 links:
 - name: arXiv
   url: https://arxiv.org/abs/1905.01218
-projects:
-- internal-project
 publication: ""
 publication_short: ""
 publication_types:
 - "3"
 publishDate: "2017-05-03T00:00:00Z"
-slides: example
+slides: ''
 summary: We develop a modeling framework to characterize the functional relationship between anthropogenic (technophony) and biological (biophony) sounds in western New York.
-tags:
-- Source Themes
 title: Characterizing functional relationships between biophony and technophony; A western New York soundscape case study
-url_code: '#'
-url_dataset: '#'
+url_code: ''
+url_dataset: ''
 url_pdf: https://arxiv.org/pdf/1905.01218.pdf
-url_poster: '#'
-url_project: ""
-url_slides: ""
-url_source: '#'
-url_video: '#'
+url_poster: ''
+url_project: ''
+url_slides: ''
+url_source: ''
+url_video: ''
 ---
+
+

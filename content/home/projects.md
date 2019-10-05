@@ -18,20 +18,20 @@ subtitle = ""
   # To filter by a specific tag, set `tag` to an existing tag name.
   # To remove toolbar, delete/comment all instances of `[[content.filter_button]]` below.
   
-  # Default filter index (e.g. 0 corresponds to the first `[[filter_button]]` instance below).
-  filter_default = 0
-  
-  [[content.filter_button]]
-    name = "All"
-    tag = "*"
-  
-  [[content.filter_button]]
-    name = "Ecoacoustics"
-    tag = "Ecoacoustics"
-  
-  [[content.filter_button]]
-    name = "Other"
-    tag = "Other"
+  # # Default filter index (e.g. 0 corresponds to the first `[[filter_button]]` instance below).
+  # filter_default = 0
+  # 
+  # [[content.filter_button]]
+  #   name = "All"
+  #   tag = "*"
+  # 
+  # [[content.filter_button]]
+  #   name = "Ecoacoustics"
+  #   tag = "Ecoacoustics"
+  # 
+  # [[content.filter_button]]
+  #   name = "Other"
+  #   tag = "Other"
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.
@@ -60,11 +60,11 @@ subtitle = ""
   # gradient_end = "SkyBlue"
   
   # Background image.
-  # image = "background.jpg"  # Name of image in `static/img/`.
-  # image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
+  image = "headers/birds.jpg"  # Name of image in `static/img/`.
+  image_darken = 0.4  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
 
   # Text color (true=light or false=dark).
-  # text_color_light = true  
+  text_color_light = true
   
 [advanced]
  # Custom CSS. 
