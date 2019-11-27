@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publication_types on Jeff Doser</title>
-    <link>/publication_types/</link>
-    <description>Recent content in Publication_types on Jeff Doser</description>
+    <title>Mahdi Teimouri on Jeff Doser</title>
+    <link>/authors/mahdi-teimouri/</link>
+    <description>Recent content in Mahdi Teimouri on Jeff Doser</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 25 Nov 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/publication_types/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/authors/mahdi-teimouri/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>3</title>
-      <link>/publication_types/3/</link>
+      <title>ForestFit: An R package for modeling tree diameter distributions</title>
+      <link>/publication/tdf19/</link>
       <pubDate>Mon, 25 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/publication_types/3/</guid>
+      <guid>/publication/tdf19/</guid>
       <description></description>
     </item>
     
