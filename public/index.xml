@@ -6,7 +6,7 @@
     <description>Recent content on Jeff Doser</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -80,6 +80,18 @@
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Dynamic, community, spatially-explicit occupancy models using acoustic data</title>
+      <link>/project/soundoccupancy/</link>
+      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/project/soundoccupancy/</guid>
+      <description>&lt;p&gt;The use of acoustic data in ecological and environmental studies has seen a dramatic increase over the last 20 years with the growth of the fields of ecoacoustics and soundscape ecology. This has largely been the result of technological developments enabling researchers to purchase large amounts of relatively inexpensive autonomous acoustic recording units. While ecoacoustics and soundscape ecology are rapidly expanding to help inform our understanding of how organisms use the acoustic environment and how this relationship is influenced by anthropogenic activities, the development of occupancy modeling techniques for acoustic data is still in it&amp;rsquo;s infancy. Acoustic recordings are ideal for large-scale wildlife monitoring studies to help inform trends in occupancy across large spatial areas over time as they are inexpensive, easy to implement, non-intrusive, and provide a permanent record that can be used later for further studies if desired. Further, with the development of clustering algorithms to identify individual bird songs in acoustic recordings, acoustic data could be a valuable source when it comes to monitoring avian species&amp;rsquo; ranges and distributions. Thus, combining acoustic recordings, clustering algorithms, and occupancy modeling techniques could provide a very efficient system for monitoring acoustically active wildlife over extended periods of space and time.&lt;/p&gt;
+
+&lt;p&gt;I seek to extend upon previous work on single-season, single-species occupancy models for acoustic data and develop a dynamic, multispecies (community), spatially explicit occupancy model utilizing acoustic data to estimate trends in species occupancy across possibly large spatio-temporal regions. The model will require a combination of an automated clustering algorithm to cluster similar sounds into groups, an expert ornithologist to identify what species these groups represent, and then small amounts of manual validation of individual songs within each group. The extension of the basic single-season, single species occupancy model to a dynamic, community, spatially-explicit occupancy model will greatly expand the applicability of acoustic recordings in wildlife monitoring programs seeking to monitor trends in occupancy in a large number of species across vast spatio-temporal regions.&lt;/p&gt;
 </description>
     </item>
     
